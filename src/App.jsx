@@ -3,17 +3,6 @@ import './App.css';
 
 import contacts from './contacts.json';
 
-/*
-const ContactInfo = (props) => {
-  return (
-    <div>
-      <h4>{props.pictureUrl}</h4>
-      <h4>{props.name}</h4>
-      <h4>{props.popularity}</h4>
-    </div>
-  );
-};
-*/
 
 class App extends Component {
   constructor() {
@@ -62,14 +51,26 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <section className="header container">
-          <h1>IronContacts</h1>
-          <button onClick={this.randomContacts}>Add Random Contact</button>
-          <button onClick={this.sortName}>Sort by name</button>
-          <button onClick={this.sortPop}>Sort by popularity</button>
+      <div className="App container">
+        <section className="header">
+          <div className="row">
+            <div className="col-header">
+              <h1>IronContacts</h1>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-header">
+              <button onClick={this.randomContacts}>Add Random Contact</button>
+            </div>
+            <div className="col-header">
+              <button onClick={this.sortName}>Sort by name</button>
+            </div>
+            <div className="col-header">
+              <button onClick={this.sortPop}>Sort by popularity</button>
+            </div>
+          </div>
         </section>
-        <table>
+        <table className="table ">
           <thead>
             <tr>
               <th>Picture</th>
